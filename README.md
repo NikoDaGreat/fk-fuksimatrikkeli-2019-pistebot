@@ -4,7 +4,7 @@ Aalto yliopiston Fyysikkokillan fuksimatrikkeli 2019 korttipelin pisteytys teleg
 
 ## Vaatimukset
 * Python 2.7.2+
-* Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot)
+* [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot)
 ```
 $ pip install python-telegram-bot
 ```

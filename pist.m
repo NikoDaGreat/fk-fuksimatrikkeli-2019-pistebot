@@ -1,3 +1,3 @@
 function out = pist(x)
-out=sum(x.^(2/3));
+  out=sum(x.^(2/3));
 end
