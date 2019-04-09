@@ -11,13 +11,23 @@ def start(bot, update):
     bot.sendMessage(chat_id,
                     'Tervetuloa Fyysikkokillan fuksimatrikkelin 2019 korttipelinpisteytysapubottihimmeliin.')
 
+
 def piste_lasku(bot, update, args):
-    np.sum(np.power(args,(2/3)))
-    pass
+    chat_id = update.message.chat.id
+
+    try:
+        vector = list(map(int, args))
+        points = np.sum(np.power(vector,(2/3)))
+        teksti = 'Pisteet ovat ' + str(points)
+        bot.sendMessage(chat_id, text=teksti )
+
+    except Exception as e:
+        bot.sendMessage(chat_id, 'Pisteet annettiin väärässä muodossa. Kokeile uudestaan!')
+        print(str(e))
 
 
 updater = Updater(token)
 updater.dispatcher.add_handler(CommandHandler('start', start))
-updater.dispatcher.add_handler(CommandHandler('pisteet +args', piste_lasku))
+updater.dispatcher.add_handler(CommandHandler('pisteet', piste_lasku, pass_args=True))
 updater.start_polling()
 updater.idle()

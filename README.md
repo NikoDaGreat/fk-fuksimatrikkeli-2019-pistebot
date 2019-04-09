@@ -10,7 +10,7 @@ $ pip install python-telegram-bot
 ```
 
 ## Asennus
-* Luo botti ja ansaitse API-avain [@BotFather](http://t.me/BotFather)
+* Luo botti ja saa API-avain [@BotFather](http://t.me/BotFather)
 * Tallenna API-avain ENV-muuttujaksi
 ```
 $ export TGPISTE_TOKEN=”ApiAvainTähän”
