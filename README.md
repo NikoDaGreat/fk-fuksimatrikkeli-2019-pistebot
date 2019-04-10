@@ -22,6 +22,11 @@ $ screen -S pistebot
 $ python pistebot.py
 ```
 
+## Käyttö
+Voit laskea pisteet komennolla "/pisteet x_1 x_2 ... x_n", missä x_n on korttien määrä jokaisessa ryhmässäsi.
+* Jos jostain ryhmästä ei ole yhtään korttia, ei tarvitse merkitä 0.
+Pisteet lasketaan oheisen kaavan mukaan.
+<img src="https://raw.githubusercontent.com/NikoDaGreat/fk-fuksimatrikkeli-2019-pistebot/master/kaava.jpg" alt="LaTeX-kaava" width="50%" height="50%" />
 
 ## Suuret kiitokset
 * Matrikkelitoimikunta 2019
