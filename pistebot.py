@@ -10,17 +10,14 @@ token = os.environ['TGPISTE_TOKEN']
 def start(bot, update):
     chat_id = update.message.chat.id
     bot.sendMessage(chat_id,
-                    'Tervetuloa Fyysikkokillan fuksimatrikkelin 2019 korttipelinpisteytysapubottihimmeliin.')
+                    'Tervetuloa Fyysikkokillan fuksimatrikkelin 2019 korttipelinpisteytysapubottihimmeliin! Aloita komennolla /help ')
 
 
 def help(bot, update):
     chat_id = update.message.chat.id
     bot.send_photo(chat_id, photo=open('kaava.jpg', 'rb'))
     bot.sendMessage(chat_id,
-                    """Voit laskea pisteet komennolla "/pisteet x_1 x_2 ... x_n", missä x_n on korttien määrä jokaisessa ryhmässäsi.
-                     Jos jostain ryhmästä ei ole yhtään korttia, ei tarvitse merkitä 0.
-
-                     Pisteet lasketaan kuvan kaavalla. Botin lähdekoodi löytyy osoitteesta https://github.com/NikoDaGreat/fk-fuksimatrikkeli-2019-pistebot""")
+                    'Voit laskea pisteet komennolla "/pisteet x_1 x_2 ... x_n", missä x_n on korttien määrä jokaisessa ryhmässäsi.\nJos jostain ryhmästä ei ole yhtään korttia, ei tarvitse merkitä 0.\n\nPisteet lasketaan kuvan kaavalla. Botin lähdekoodi löytyy osoitteesta https://github.com/NikoDaGreat/fk-fuksimatrikkeli-2019-pistebot')
 
 def piste_lasku(bot, update, args):
     chat_id = update.message.chat.id
